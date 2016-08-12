@@ -33,6 +33,14 @@ module.exports = function makeWebpackConfig () {
     app: './src/app/app.js'
   };
 
+  config.externals = isTest ? {} : {
+    externals: ['axios'],
+    resolve: {
+      alias: {
+        'js-data-angular': './node_modules/js-data-angular/dist/js-data-angular.js'
+      }
+    }
+  };
   /**
    * Output
    * Reference: http://webpack.github.io/docs/configuration.html#output
@@ -79,6 +87,7 @@ module.exports = function makeWebpackConfig () {
   // Initialize module
   config.module = {
     preLoaders: [],
+
     loaders: [{
       // JS LOADER
       // Reference: https://github.com/babel/babel-loader

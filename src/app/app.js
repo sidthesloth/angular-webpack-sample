@@ -4,9 +4,16 @@
 
 import 'bootstrap/dist/css/bootstrap.css';
 import angular from 'angular';
-import routing from './app.config';
+import uirouter from 'angular-ui-router';
+import ngmaterial from 'angular-material';
+// import jsdata from 'js-data';
+// import jsDataModuleName from 'js-data-angular';
 
-import '../style/app.css';
+
+import routing from './app.config';
+import home from './features/home';
+
+import 'angular-material/angular-material.css';
 
 let app = () => {
     return {
@@ -22,11 +29,14 @@ class AppCtrl {
     }
 }
 
-const MODULE_NAME = 'atrsystem';
+const MODULE_NAME = 'app';
 
-angular.module(MODULE_NAME, [])
+angular.module(MODULE_NAME, [uirouter, ngmaterial, home])
     .config(routing)
     .directive('app', app)
-    .controller('AppCtrl', AppCtrl);
+    .controller('AppCtrl', AppCtrl)
+    .run((DS, DSVersion, $rootScope) => {
+        $rootScope.test = 'It works! Using js-data ' + DSVersion.full;
+    });
 
 export default MODULE_NAME;
