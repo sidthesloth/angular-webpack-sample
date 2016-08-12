@@ -1,7 +1,7 @@
 {
-  "name": "angular-webpack-workflow",
+  "name": "angular-webpack-",
   "version": "1.0.0",
-  "description": "A workflow for Angular made with Webpack",
+  "description": "A sample for Angular made with Webpack",
   "scripts": {
     "build": "rimraf dist && webpack --bail --progress --profile",
     "server": "webpack-dev-server --history-api-fallback --inline --progress",
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Foxandxss/angular-webpack-workflow.git"
+    "url": "https://github.com/Foxandxss/angular-webpack-sample.git"
   },
-  "author": "Jesus Rodriguez",
-  "license": "MIT",
+  "author": "Dennis saka",
+  "license": "",
   "bugs": {
-    "url": "https://github.com/Foxandxss/angular-webpack-workflow/issues"
+    "url": "https://github.com/Foxandxss/angular-webpack-sample/issues"
   },
-  "homepage": "https://github.com/Foxandxss/angular-webpack-workflow",
+  "homepage": "https://github.com/Foxandxss/angular-webpack-sample",
   "dependencies": {
     "angular": "^1.5.0",
     "angular-animate": "^1.5.8",
