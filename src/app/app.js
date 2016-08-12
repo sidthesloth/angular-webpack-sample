@@ -7,7 +7,7 @@ import angular from 'angular';
 import uirouter from 'angular-ui-router';
 import ngmaterial from 'angular-material';
 // import jsdata from 'js-data';
-// import jsDataModuleName from 'js-data-angular';
+import jsDataModuleName from 'js-data-angular';
 
 
 import routing from './app.config';
